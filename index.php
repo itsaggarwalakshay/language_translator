@@ -12,23 +12,23 @@ if (array_key_exists('submit', $_GET)) {
 
   	$curl = curl_init();
 
-		curl_setopt_array($curl, [
-		CURLOPT_URL => "https://google-translate1.p.rapidapi.com/language/translate/v2",
-		CURLOPT_RETURNTRANSFER => true,
-		CURLOPT_FOLLOWLOCATION => true,
-		CURLOPT_ENCODING => "",
-		CURLOPT_MAXREDIRS => 10,
-		CURLOPT_TIMEOUT => 30,
-		CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-		CURLOPT_CUSTOMREQUEST => "POST",
-		CURLOPT_POSTFIELDS => "q=$text&target=$to",
-		CURLOPT_HTTPHEADER => [
+curl_setopt_array($curl, [
+	CURLOPT_URL => "https://google-translate1.p.rapidapi.com/language/translate/v2",
+	CURLOPT_RETURNTRANSFER => true,
+	CURLOPT_FOLLOWLOCATION => true,
+	CURLOPT_ENCODING => "",
+	CURLOPT_MAXREDIRS => 10,
+	CURLOPT_TIMEOUT => 30,
+	CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+	CURLOPT_CUSTOMREQUEST => "POST",
+	CURLOPT_POSTFIELDS => "q=$text&target=$to",
+	CURLOPT_HTTPHEADER => [
 		"Accept-Encoding: application/gzip",
 		"X-RapidAPI-Host: google-translate1.p.rapidapi.com",
-		"X-RapidAPI-Key: af65e2a038msh6da9c55ee1f6960p1ded06jsn453d2d93981e",
+		"X-RapidAPI-Key: d7b4029552msh4ac635fc439220cp11ae43jsnaff0745aa259",
 		"content-type: application/x-www-form-urlencoded"
-		],
-	]);
+	],
+]);
 
 		$response = curl_exec($curl);
 		$err = curl_error($curl);
@@ -41,6 +41,7 @@ if (array_key_exists('submit', $_GET)) {
 }
 
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
